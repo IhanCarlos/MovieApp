@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .lightGray
         homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         fetchMovies()
     }
@@ -54,6 +54,18 @@ class HomeViewController: UIViewController {
             }
         }
     }
+}
+
+extension HomeViewController: HomeScreenProtocol {
+    func actionButtonOne() {
+        print("Button one pressed")
+    }
+    
+    func actionButtonTwo() {
+        print("Button two pressed")
+    }
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate,UITableViewDataSource {

@@ -23,18 +23,18 @@ class MovieTableViewCellScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.numberOfLines = 0
         label.textColor = .black
-        label.backgroundColor = .lightGray
         return label
     }()
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.numberOfLines = 0
         label.textColor = .lightGray
-        label.backgroundColor = .lightGray
         return label
     }()
     
@@ -58,14 +58,16 @@ class MovieTableViewCellScreen: UIView {
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             movieImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            movieImageView.heightAnchor.constraint(equalToConstant: 160),
-            movieImageView.widthAnchor.constraint(equalToConstant: 160),
+            movieImageView.heightAnchor.constraint(equalToConstant: 170),
+            movieImageView.widthAnchor.constraint(equalToConstant: 112),
             
             titleLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 20),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
             
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            descriptionLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 15)
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            descriptionLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 15),
+            descriptionLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 10),
             
         ])
     }

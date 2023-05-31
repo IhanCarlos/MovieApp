@@ -16,6 +16,28 @@ class HomeScreen: UIView {
         tb.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.identifier)
         return tb
     }()
+    
+    var dataSource: UITableViewDataSource? {
+           get {
+               return tableView.dataSource
+           }
+           set {
+               tableView.dataSource = newValue
+           }
+       }
+       
+       var delegate: UITableViewDelegate? {
+           get {
+               return tableView.delegate
+           }
+           set {
+               tableView.delegate = newValue
+           }
+       }
+       
+       func reloadData() {
+           tableView.reloadData()
+       }
 
     override init(frame: CGRect) {
         super.init(frame: frame)

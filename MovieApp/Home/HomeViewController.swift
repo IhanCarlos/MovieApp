@@ -10,8 +10,8 @@ import Alamofire
 
 class HomeViewController: UIViewController {
     
-    var movies: [Movie] = []
     var homeScreen: HomeScreen?
+    var movies: [Movie] = []
     
     override func loadView() {
         homeScreen = HomeScreen()
@@ -25,15 +25,15 @@ class HomeViewController: UIViewController {
         fetchMovies()
     }
     
-    func fetchMovies() {
+    private func fetchMovies() {
         let apiKey = "04e551e58f99661e65616e865bdb40dc" // Substitua pela sua chave de API do TMDB
-
+        
         let url = "https://api.themoviedb.org/3/discover/movie"
         let parameters: Parameters = [
             "api_key": apiKey,
             "sort_by": "vote_average.desc"
         ]
-
+        
         AF.request(url, method: .get, parameters: parameters).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
                         }
                         return nil
                     }
-//                    self.tableView.reloadData()
+                    self.homeScreen?.tableView.reloadData()
                 }
             case .failure(let error):
                 print("Error: \(error)")

@@ -14,6 +14,12 @@ protocol HomeScreenProtocol: AnyObject {
 
 class HomeScreen: UIView {
     
+    weak var navigationBarDelegate: HomeScreenProtocol?
+    
+    func delegate(delegate: HomeScreenProtocol?) { // funcao para caonfigurar o delegate
+        self.delegate = delegate as! any UITableViewDelegate
+    }
+    
     lazy var tableView: UITableView = {
         let tb = UITableView()
         tb.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +67,6 @@ class HomeScreen: UIView {
         navigationBar.items = [navigationItem]
     }
     @objc private func addButtonTapped() {
-        
     }
     
     @objc private func searchButtonTapped() {

@@ -16,6 +16,8 @@
 		1E627BCA2A258D2400646FDA /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BC92A258D2400646FDA /* Movies.swift */; };
 		1E627BCE2A262A5900646FDA /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BCD2A262A5900646FDA /* MovieTableViewCell.swift */; };
 		1E627BD02A26AF9C00646FDA /* MovieTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BCF2A26AF9B00646FDA /* MovieTableViewCellScreen.swift */; };
+		1E627BD32A28347300646FDA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BD22A28347300646FDA /* LoginScreen.swift */; };
+		1E627BD52A2834A400646FDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BD42A2834A400646FDA /* LoginViewController.swift */; };
 		F31B3E6B46689BB75BE7301F /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A89253F6984C08562DFE6F /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		1E627BC92A258D2400646FDA /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		1E627BCD2A262A5900646FDA /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		1E627BCF2A26AF9B00646FDA /* MovieTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellScreen.swift; sourceTree = "<group>"; };
+		1E627BD22A28347300646FDA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		1E627BD42A2834A400646FDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26A89253F6984C08562DFE6F /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		587F15E1DD307D9966535F1D /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C3B7B3E14D3D8733F8DF24DD /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		1E627BB02A25778F00646FDA /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E627BD12A28344F00646FDA /* Login */,
 				1E627BC82A258D0800646FDA /* Model */,
 				1E627BC52A25789200646FDA /* Home */,
 				1E627BB12A25778F00646FDA /* AppDelegate.swift */,
@@ -105,6 +110,15 @@
 				1E627BCD2A262A5900646FDA /* MovieTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1E627BD12A28344F00646FDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1E627BD22A28347300646FDA /* LoginScreen.swift */,
+				1E627BD42A2834A400646FDA /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		5FD3D6600515DE7EB42BE9E2 /* Pods */ = {
@@ -238,11 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E627BD52A2834A400646FDA /* LoginViewController.swift in Sources */,
 				1E627BCA2A258D2400646FDA /* Movies.swift in Sources */,
 				1E627BD02A26AF9C00646FDA /* MovieTableViewCellScreen.swift in Sources */,
 				1E627BC72A257B3100646FDA /* HomeScreen.swift in Sources */,
 				1E627BCE2A262A5900646FDA /* MovieTableViewCell.swift in Sources */,
 				1E627BB62A25778F00646FDA /* HomeViewController.swift in Sources */,
+				1E627BD32A28347300646FDA /* LoginScreen.swift in Sources */,
 				1E627BB22A25778F00646FDA /* AppDelegate.swift in Sources */,
 				1E627BB42A25778F00646FDA /* SceneDelegate.swift in Sources */,
 			);

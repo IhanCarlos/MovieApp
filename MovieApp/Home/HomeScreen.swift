@@ -7,32 +7,15 @@
 
 import UIKit
 
-protocol HomeScreenProtocol: AnyObject {
-    func actionButtonOne()
-    func actionButtonTwo()
-}
-
 class HomeScreen: UIView {
-    
-    weak var navigationBarDelegate: HomeScreenProtocol?
-    
-    func delegate(delegate: HomeScreenProtocol?) { // funcao para caonfigurar o delegate
-        self.delegate = delegate as! any UITableViewDelegate
-    }
     
     lazy var tableView: UITableView = {
         let tb = UITableView()
         tb.translatesAutoresizingMaskIntoConstraints = false
-        tb.backgroundColor = .white
+        tb.backgroundColor = UIColor(named: "BackgroundColor")
+        tb.register(SuccessfulTableViewCell.self, forCellReuseIdentifier: SuccessfulTableViewCell.identifier)
         tb.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.identifier)
         return tb
-    }()
-    
-    lazy var navigationBar: UINavigationBar = {
-        let nav = UINavigationBar()
-        nav.translatesAutoresizingMaskIntoConstraints = false
-        nav.backgroundColor = .green
-        return nav
     }()
     
     override init(frame: CGRect) {
@@ -52,39 +35,15 @@ class HomeScreen: UIView {
     
     private func addElements() {
         addSubview(tableView)
-        addSubview(navigationBar)
-    }
-    
-    private func setupNavigationBar() {
-        let navigationItem = UINavigationItem(title: "Movies")
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-        navigationItem.rightBarButtonItem = addButton
-        
-        let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTapped))
-        navigationItem.leftBarButtonItem = searchButton
-        
-        navigationBar.items = [navigationItem]
-    }
-    @objc private func addButtonTapped() {
-    }
-    
-    @objc private func searchButtonTapped() {
-        // Ação do botão de busca
-        // Redirecione para a tela desejada
     }
     
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: navigationBar.topAnchor),
-            
-            navigationBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            navigationBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-            navigationBar.bottomAnchor.constraint(equalTo: bottomAnchor),
-            navigationBar.heightAnchor.constraint(equalToConstant: 44),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     

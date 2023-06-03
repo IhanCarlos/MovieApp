@@ -15,3 +15,8 @@ struct Movie {
     
 }
 
+enum CellType {
+    case SuccessfulMovies
+    case Movies
+}
+

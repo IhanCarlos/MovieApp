@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
         homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         fetchMovies()
     }
@@ -56,29 +55,35 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: HomeScreenProtocol {
-    func actionButtonOne() {
-        print("Button one pressed")
-    }
-    
-    func actionButtonTwo() {
-        print("Button two pressed")
-    }
-    
-    
-}
-
 extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    private func determineCellType(for indexPath: IndexPath) -> CellType {
+        if indexPath.row == 0 {
+            return .SuccessfulMovies
+        } else {
+            return .Movies
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return movies.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:MovieTableViewCell? = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell
-        cell?.configure(with: movies[indexPath.row])
-
-        return cell ?? UITableViewCell()
+        let cellType = determineCellType(for: indexPath)
+          
+          switch cellType {
+          case .SuccessfulMovies:
+              let cell = tableView.dequeueReusableCell(withIdentifier: SuccessfulTableViewCell.identifier, for: indexPath) as! SuccessfulTableViewCell
+              // Configure a célula de informações gerais
+              return cell
+          case .Movies:
+              let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
+              // Configure a célula de filme
+              let movie = movies[indexPath.row]
+              cell.configure(with: movie)
+              return cell
+          }
         
     }
     

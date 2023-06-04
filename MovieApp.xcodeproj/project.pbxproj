@@ -25,6 +25,8 @@
 		1E627BE42A2A2F7500646FDA /* MoviesGerneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E627BE32A2A2F7500646FDA /* MoviesGerneModel.swift */; };
 		1E7976202A2AB32200160199 /* ActionMoviesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E79761F2A2AB32200160199 /* ActionMoviesScreen.swift */; };
 		1E7976222A2AB33E00160199 /* ActionMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7976212A2AB33E00160199 /* ActionMoviesViewController.swift */; };
+		1E7976252A2BC4FA00160199 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7976242A2BC4F900160199 /* RegisterViewController.swift */; };
+		1E7976272A2BC5F300160199 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7976262A2BC5F300160199 /* RegisterScreen.swift */; };
 		F31B3E6B46689BB75BE7301F /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A89253F6984C08562DFE6F /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		1E627BE32A2A2F7500646FDA /* MoviesGerneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGerneModel.swift; sourceTree = "<group>"; };
 		1E79761F2A2AB32200160199 /* ActionMoviesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMoviesScreen.swift; sourceTree = "<group>"; };
 		1E7976212A2AB33E00160199 /* ActionMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMoviesViewController.swift; sourceTree = "<group>"; };
+		1E7976242A2BC4F900160199 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1E7976262A2BC5F300160199 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		26A89253F6984C08562DFE6F /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		587F15E1DD307D9966535F1D /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C3B7B3E14D3D8733F8DF24DD /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,8 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				1E627BE02A29319F00646FDA /* Service */,
-				1E627BD12A28344F00646FDA /* Login */,
 				1E627BC82A258D0800646FDA /* Model */,
+				1E627BD12A28344F00646FDA /* Login */,
+				1E7976232A2BC4D600160199 /* Register */,
 				1E627BC52A25789200646FDA /* Home */,
 				1E627BB12A25778F00646FDA /* AppDelegate.swift */,
 				1E627BB32A25778F00646FDA /* SceneDelegate.swift */,
@@ -180,6 +185,15 @@
 				1E7976212A2AB33E00160199 /* ActionMoviesViewController.swift */,
 			);
 			path = ActionMoviesView;
+			sourceTree = "<group>";
+		};
+		1E7976232A2BC4D600160199 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1E7976262A2BC5F300160199 /* RegisterScreen.swift */,
+				1E7976242A2BC4F900160199 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		5FD3D6600515DE7EB42BE9E2 /* Pods */ = {
@@ -325,7 +339,9 @@
 				1E627BDD2A29258F00646FDA /* SuccessfulMoviesCollectionViewCell.swift in Sources */,
 				1E627BCE2A262A5900646FDA /* MovieTableViewCell.swift in Sources */,
 				1E627BB62A25778F00646FDA /* HomeViewController.swift in Sources */,
+				1E7976272A2BC5F300160199 /* RegisterScreen.swift in Sources */,
 				1E627BD82A29222900646FDA /* CollectionView.swift in Sources */,
+				1E7976252A2BC4FA00160199 /* RegisterViewController.swift in Sources */,
 				1E627BD32A28347300646FDA /* LoginScreen.swift in Sources */,
 				1E627BB22A25778F00646FDA /* AppDelegate.swift in Sources */,
 				1E627BB42A25778F00646FDA /* SceneDelegate.swift in Sources */,

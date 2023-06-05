@@ -8,15 +8,13 @@
 import Alamofire
 import UIKit
 
-struct Movie {
-    let title: String
-    let imageURL: String
-    let description: String
-    
+struct MoviesResponse: Codable {
+    let results: [Movie]
 }
 
-enum CellType {
-    case SuccessfulMovies
-    case Movies
+struct Movie: Codable {
+    let title: String
+    let posterPath: String
 }
+
 

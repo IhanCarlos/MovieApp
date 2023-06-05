@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "E70D52C0-74A8-4A67-A5FB-BE325CAB785B"
-   type = "1"
+   uuid = "2C743920-0BCC-4DDC-97C3-D7DFB7A91ABA"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D069BFE-4ECC-4599-96E9-D117A448E22A"
-            shouldBeEnabled = "No"
+            uuid = "BA0E35DF-27F7-4EC7-BDCC-F20A1D850D99"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieApp/Home/HomeScreen.swift"
+            filePath = "MovieApp/Home/Collection/CollectionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "HomeScreen"
-            landmarkType = "3">
+            landmarkName = "collectionView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

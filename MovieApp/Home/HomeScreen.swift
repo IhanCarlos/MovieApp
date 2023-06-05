@@ -13,8 +13,7 @@ class HomeScreen: UIView {
         let tb = UITableView()
         tb.translatesAutoresizingMaskIntoConstraints = false
         tb.backgroundColor = UIColor(named: "BackgroundColor")
-        tb.register(SuccessfulTableViewCell.self, forCellReuseIdentifier: SuccessfulTableViewCell.identifier)
-        tb.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.identifier)
+        tb.register(ActionMoviesTableViewCell.self, forCellReuseIdentifier: ActionMoviesTableViewCell.identifier)
         return tb
     }()
     
@@ -38,34 +37,6 @@ class HomeScreen: UIView {
     }
     
     private func setUpConstraints() {
-        NSLayoutConstraint.activate([
-            
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-        ])
-    }
-    
-    var dataSource: UITableViewDataSource? {
-        get {
-            return tableView.dataSource
-        }
-        set {
-            tableView.dataSource = newValue
-        }
-    }
-    
-    var delegate: UITableViewDelegate? {
-        get {
-            return tableView.delegate
-        }
-        set {
-            tableView.delegate = newValue
-        }
-    }
-    
-    func reloadData() {
-        tableView.reloadData()
+        tableView.pin(to: self)
     }
 }

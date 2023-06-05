@@ -17,9 +17,3 @@ struct MovieGerne{
     let design: String
 }
 
-struct CardsMovies {
-    let title: String
-    let image: String
-    let description: String
-}
-

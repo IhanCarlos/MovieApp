@@ -135,6 +135,7 @@ class LoginScreen: UIView {
         addElements()
         configConstraints()
         startImageAnimation()
+        configButtonEnable(false)
     }
     
     required init?(coder: NSCoder) {
@@ -174,7 +175,7 @@ class LoginScreen: UIView {
             self.loginButton.setTitleColor(.black, for: .normal)
             self.loginButton.isEnabled = true
         } else {
-            self.loginButton.setTitleColor(.red, for: .normal)
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
             self.loginButton.isEnabled = false
         }
     }

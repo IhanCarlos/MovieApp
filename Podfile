@@ -7,7 +7,6 @@ target 'MovieApp' do
 
   # Pods for MovieApp
 
-pod 'Alamofire'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
